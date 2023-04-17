@@ -1,9 +1,11 @@
 <div class="row align-center mb-5">
-    <a href="/login">Add Donor</a>
+   <a href="/adddonor">Add Donor</a>
     {{#if loggedIn}}
+     
     <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
     {{!-- <a href="/adddonor"></a> --}}
+    {{else}}
+    <a href="/login"></a>
     {{/if}}
   </div>
   
