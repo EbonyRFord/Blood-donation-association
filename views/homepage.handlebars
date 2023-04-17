@@ -1,25 +1,73 @@
 <div class="row align-center mb-5">
-  <div class="col-md-6">
-    <!-- Call the helper function with triple brackets to render the span as HTML -->
-    <h2>{{{get_emoji}}} Test User</h2>
+    <a href="/login">Add Donor</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    {{!-- <a href="/adddonor"></a> --}}
+    {{/if}}
   </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
+  
+    </div>
+</div>
+<div class="row align-center mb-5">
+   <a href="/login">Search for Blood</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    {{!-- <a href="/searchforblood"></a> --}}
+    {{/if}}
+  </div>
+
+    
   </div>
 </div>
 <div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} Test User</h2>
+  <a href="/login">Delete Donor/Patient</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    {{!-- <a href="/deletedonor"></a> --}}
+    {{/if}}
   </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
+  
+    
   </div>
 </div>
 <div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} Test User</h2>
+  
+   <a href="/login">Add Patient</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    {{!-- <a href="/addpatient"></a> --}}
+    {{/if}}
   </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:test@gmail.com">test@gmail.com</a></h3>
+  
+    </div>
+</div>
+<div class="row align-center mb-5">
+  
+     <a href="/login">Donor List</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    {{!-- <a href="/donorlist"></a> --}}
+    {{/if}}
+  </div>
+
+    
+  </div>
+</div>
+<div class="row align-center mb-5">
+
+      <a href="/login">Patient List</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    {{!-- <a href="/patientlist"></a> --}}
+    {{/if}}
+  </div>
+ 
+    
   </div>
 </div>
