@@ -1,75 +1,29 @@
-<div class="row align-center mb-5">
-   <a href="/adddonor">Add Donor</a>
-    {{#if loggedIn}}
-     
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{!-- <a href="/adddonor"></a> --}}
-    {{else}}
-    <a href="/login"></a>
-    {{/if}}
-  </div>
-  
-    </div>
-</div>
-<div class="row align-center mb-5">
-   <a href="/login">Search for Blood</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    {{!-- <a href="/searchforblood"></a> --}}
-    {{/if}}
+<div>
+
+  <div class="row align-center mb-5">
+    <a href="/adddonor">Add Donor</a>
   </div>
 
-    
-  </div>
-</div>
-<div class="row align-center mb-5">
-  <a href="/login">Delete Donor/Patient</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    {{!-- <a href="/deletedonor"></a> --}}
-    {{/if}}
-  </div>
-  
-    
-  </div>
-</div>
-<div class="row align-center mb-5">
-  
-   <a href="/login">Add Patient</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    {{!-- <a href="/addpatient"></a> --}}
-    {{/if}}
-  </div>
-  
-    </div>
-</div>
-<div class="row align-center mb-5">
-  
-     <a href="/login">Donor List</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    {{!-- <a href="/donorlist"></a> --}}
-    {{/if}}
+  <div class="row align-center mb-5">
+    <a href="/search">Search for Blood</a>
   </div>
 
-    
-  </div>
-</div>
-<div class="row align-center mb-5">
+  <div class="row align-center mb-5">
+    <a href="/delete">Delete Donor/Patient</a>
+   </div>
 
-      <a href="/login">Patient List</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    {{!-- <a href="/patientlist"></a> --}}
-    {{/if}}
+  <div class="row align-center mb-5">
+    <a href="/add">Add Patient</a>
   </div>
- 
-    
+
+  <div class="row align-center mb-5">
+    <a href="/donorlist">Donor List</a>
   </div>
+
+  <div class="row align-center mb-5">
+    <a href="/patientlist">Patient List</a>
+  </div>
+
+<script src="./js/logout.js"></script>
+
 </div>

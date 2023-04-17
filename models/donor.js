@@ -3,7 +3,9 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 
-class Donor extends Model {}
+class Donor extends Model {checkPassword(loginPw) {
+  return bcrypt.compareSync(loginPw, this.password);
+}}
 
 Donor.init(
     {
@@ -19,8 +21,10 @@ Donor.init(
       },
       blood_type: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
+      // ONCE SIGNED UP CAN UPDATE AT PROFILE??
+
       // bloodbank_id: {
       //   type: DataTypes.INTEGER,
       //   references: {
@@ -45,6 +49,10 @@ Donor.init(
         beforeCreate: async (newUserData) => {
           newUserData.password = await bcrypt.hash(newUserData.password, 10);
           return newUserData;
+        },
+        beforeUpdate: async (updatedUserData) => {
+          updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+          return updatedUserData;
         },
       },
       sequelize,

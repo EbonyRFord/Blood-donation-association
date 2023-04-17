@@ -28,13 +28,13 @@ Patient.init(
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
-    bloodbank_id: {
-      type: DataTypes.INTEGER,
-        references: {
-          model: 'bloodbank',
-          key: 'id',
-        },
-    },
+    // bloodbank_id: {
+    //   type: DataTypes.INTEGER,
+    //     references: {
+    //       model: 'bloodbank',
+    //       key: 'id',
+    //     },
+    // },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
