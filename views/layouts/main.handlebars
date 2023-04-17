@@ -10,7 +10,9 @@
 
 <body>
   <header class="display-flex justify-space-between align-center p-2">
-    <nav>
+    
+  </header>
+  <nav>
       <a href="/">Home</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
@@ -18,7 +20,6 @@
     <a href="/login">Login</a>
     {{/if}}
   </nav>
-  </header>
   <main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
     {{{ body }}}
