@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
+
 
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
@@ -12,6 +14,11 @@ router.get('/login', (req, res) => {
     return;
   }
   res.render('login');
+});
+
+router.get('/adddonor', withAuth, async (req, res) => {
+  
+  res.render('adddonor');
 });
 
 
