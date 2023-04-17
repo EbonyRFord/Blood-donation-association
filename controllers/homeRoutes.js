@@ -4,7 +4,9 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
-  res.render('homepage');
+  res.render('homepage', {
+    loggedIn: req.session.logged_in
+   });
 });
 
 router.get('/login', (req, res) => {
@@ -21,5 +23,9 @@ router.get('/adddonor', withAuth, async (req, res) => {
   res.render('adddonor');
 });
 
+router.get('/scheduler', withAuth, async (req, res) => {
+  
+  res.render('scheduler');
+});
 
 module.exports = router;

@@ -2,28 +2,24 @@
   {
     "name": "Sallie Mae",
     "blood_type": "O",
-    "bloodbank_id": 1,
     "username": "sal@hotmail.com",
     "password": "password12345"
   },
   {
     "name": "Chris",
     "blood_type": "A",
-    "bloodbank_id": 2,
     "username": "username2",
     "password": "password2"
   },
   {
     "name": "Aiden",
     "blood_type": "B+",
-    "bloodbank_id": 3,
     "username": "username3",
     "password": "password3"
   },
   {
     "name": "Ebony",
     "blood_type": "A",
-    "bloodbank_id": 1,
     "username": "username4",
     "password": "password4"
   }
