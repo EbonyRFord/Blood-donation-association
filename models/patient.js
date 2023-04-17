@@ -24,10 +24,10 @@ Patient.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    disease: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // disease: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     bloodbank_id: {
       type: DataTypes.INTEGER,
         references: {
@@ -58,7 +58,7 @@ Patient.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'patient',
   }
 );
 
