@@ -1,27 +1,30 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
+    "name": "Sallie Mae",
+    "blood_type": "O",
+    "bloodbank_id": 1,
+    "username": "sal@hotmail.com",
     "password": "password12345"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "name": "Chris",
+    "blood_type": "A",
+    "bloodbank_id": 2,
+    "username": "username2",
+    "password": "password2"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "name": "Aiden",
+    "blood_type": "B+",
+    "bloodbank_id": 3,
+    "username": "username3",
+    "password": "password3"
   },
   {
-    "name": "Jordan",
-    "email": "jordan99@msn.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Blake",
-    "email": "the_blake@yahoo.com",
-    "password": "password12345"
+    "name": "Ebony",
+    "blood_type": "A",
+    "bloodbank_id": 1,
+    "username": "username4",
+    "password": "password4"
   }
 ]
