@@ -3,7 +3,7 @@ const { User } = require('../models');
 const { Donor } = require('../models')
 
 const userData = require('./userData.json');
-const donorDate = require('./donorData.json')
+const donorData = require('./donorData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });

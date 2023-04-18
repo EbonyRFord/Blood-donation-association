@@ -28,7 +28,7 @@ Donor.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-      bloodtpye: {
+      bloodtype: {
         type: DataTypes.STRING,
         allowNull: false,
       },    
