@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/profile');
     return;
   }
   res.render('login');
@@ -20,12 +20,17 @@ router.get('/login', (req, res) => {
 
 router.get('/adddonor', withAuth, async (req, res) => {
   
-  res.render('adddonor');
+  res.render('adddonor', {loggedIn: req.session.loggedIn});
 });
 
 router.get('/scheduler', withAuth, async (req, res) => {
   
-  res.render('scheduler');
+  res.render('scheduler', {loggedIn: req.session.loggedIn});
+});
+
+router.get('/profile', withAuth, async (req, res) => {
+  
+  res.render('profile', {loggedIn: req.session.loggedIn});
 });
 
 module.exports = router;
