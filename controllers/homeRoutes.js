@@ -18,10 +18,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/adddonor', withAuth, async (req, res) => {
-  
-  res.render('adddonor', {loggedIn: req.session.loggedIn});
-});
 
 router.get('/scheduler', withAuth, async (req, res) => {
   
@@ -31,6 +27,11 @@ router.get('/scheduler', withAuth, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   
   res.render('profile', {loggedIn: req.session.loggedIn});
+});
+
+router.get('/donor', withAuth, async (req, res) => {
+  
+  res.render('donor', {loggedIn: req.session.loggedIn});
 });
 
 module.exports = router;

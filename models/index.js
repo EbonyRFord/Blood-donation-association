@@ -1,7 +1,4 @@
+const User = require('./user');
+const Donor = require('./donor')
 
-const Donor = require('./donor');
-
-
-
-module.exports = { Donor};
-
+module.exports = { Donor, User };

@@ -1,0 +1,22 @@
+
+#logout {
+  float: right;
+  margin-right: 20px;
+}
+.footer{
+  text-align: center;
+}
+    
+.login {
+  float: right;
+  padding-right: 50px;
+}
+    
+.pe-2 {
+  float: left;
+  margin-left: 20px;
+}
+    
+.pe-3{
+  margin-left: 20px;
+}

@@ -4,34 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
+  <title>Blood Donation Association</title>
   <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    
-  </header>
-   <nav class="navbar">
-  <img src="/public/images/logo plus sign .png"> 
-   <h1> Blood Donation Association</h1>
- 
-   <span>
+
+<header class="display-flex justify-space-between align-center p-2"></header>
+
+  <nav class="navbar">
+    {{!-- <img src="/images/logo-plus-sign.jpg" alt"logo"> --}}
+    <h1 class="footer"> Blood Donation Association</h1>
+
+    <span>
+      <a href="/profile" class="pe-3">Profile</a>
       <a href="/" class="pe-2">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="logout">Logout</button>
-    {{else}}
-    <a href="/login" class="login">Login</a>
-    {{/if}}
+      {{#if loggedIn}}
+      <button id="logout" class="logout">Logout</button>
+      {{else}}
+      <a href="/login" class="login">Login</a>
+      {{/if}}
     </span>
+
   </nav>
-  <main class="container container-fluid mt-5">
+
+<main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
     {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+
+</main>
+
+<footer class="footer">
+Made by: Aiden Miller, Ebony Ford, and Christopher Snyder
+</footer>
+
 </body>
 
 </html>

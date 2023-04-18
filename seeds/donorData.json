@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Chris",
+        "height": 72,
+        "weight": 200,
+        "gender": "Male",
+        "bloodtype": "A+",
+        "age": 20,
+        "phone": 8285551212
+    },
+    {
+        "name": "Sallie",
+        "height": 64,
+        "weight": 130,
+        "gender": "Female",
+        "bloodtype": "A+",
+        "age": 20,
+        "phone": 8285551111
+    }
+]
