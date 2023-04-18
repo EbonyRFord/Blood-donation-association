@@ -23,15 +23,7 @@ Donor.init(
         type: DataTypes.STRING,
         allowNull: true,
       },
-      // ONCE SIGNED UP CAN UPDATE AT PROFILE??
-
-      // bloodbank_id: {
-      //   type: DataTypes.INTEGER,
-      //   references: {
-      //     model: 'bloodbank',
-      //     key: 'id',
-      //   },
-      // },  
+      
       username: {
         type: DataTypes.STRING,
         allowNull: false,
