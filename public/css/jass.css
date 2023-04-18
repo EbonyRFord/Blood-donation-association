@@ -12,6 +12,21 @@ html {
   /* 2 */
 }
 
+#logout {
+
+float: right;
+padding-right: 50px;
+}
+
+.login {
+  float: right;
+  padding-right: 50px;
+}
+
+.pe-2 {
+float: left;
+ padding-right: 50px;
+}
 /* Sections
    ========================================================================== */
 /**
@@ -19,6 +34,10 @@ html {
  */
 body {
   margin: 0;
+}
+
+.container.container-fluid {
+  width: 85%;
 }
 
 /**

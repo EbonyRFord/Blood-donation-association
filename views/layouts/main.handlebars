@@ -12,13 +12,18 @@
   <header class="display-flex justify-space-between align-center p-2">
     
   </header>
-  <nav>
-      <a href="/">Home</a>
+   <nav class="navbar">
+  <img src="/public/images/logo plus sign .png"> 
+   <h1> Blood Donation Association</h1>
+ 
+   <span>
+      <a href="/" class="pe-2">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" class="logout">Logout</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a href="/login" class="login">Login</a>
     {{/if}}
+    </span>
   </nav>
   <main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
