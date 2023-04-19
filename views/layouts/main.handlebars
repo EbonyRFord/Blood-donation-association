@@ -14,7 +14,6 @@
 <header>
 
   <nav class="navbar">
-    {{!-- <img src="/images/logo-plus-sign.jpg" alt"logo"> --}}
     <h1 class="header"> Blood Donation Association</h1>
 
     <span>
@@ -38,6 +37,10 @@
 <footer class="footer">
 Made by: Aiden Miller, Ebony Ford, and Christopher Snyder
 </footer>
+
+{{#if loggedIn}}
+ <script src="/js/logout.js"></script>
+  {{/if}}
 
 </body>
 

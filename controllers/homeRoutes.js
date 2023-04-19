@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Donor, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -31,7 +32,33 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/donorlist', withAuth, async (req, res) => {
   
-  res.render('donorlist', {loggedIn: req.session.loggedIn});
+  try {
+    // Get all projects and JOIN with user data
+    const donorData = await Donor.findAll({
+      include: [
+        {
+          model: Donor,
+          attributes: ['name','height','weight','gender','bloodtype','age','phone'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const donors = donorData.map((donor) => donor.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('donorlist', { 
+      donors, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+
+
+
+
 });
+
 
 module.exports = router;
