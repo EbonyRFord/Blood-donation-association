@@ -29,9 +29,9 @@ router.get('/profile', withAuth, async (req, res) => {
   res.render('profile', {loggedIn: req.session.loggedIn});
 });
 
-router.get('/donor', withAuth, async (req, res) => {
+router.get('/donorlist', withAuth, async (req, res) => {
   
-  res.render('donor', {loggedIn: req.session.loggedIn});
+  res.render('donorlist', {loggedIn: req.session.loggedIn});
 });
 
 module.exports = router;
