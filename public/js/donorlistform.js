@@ -1,13 +1,13 @@
 const donorFormHandler = async (event) => {
     event.preventDefault();
   
-    const donorName = document.querySelector('#donorName').value.trim();
-    const donorHeight = document.querySelector('#donorHeight').value;
-    const donorWeight= document.querySelector('#donorWeight').value.trim();
-    const donorGender = document.querySelector('#donorGender').value();
-    const donorType = document.querySelector('#donorType').value();
-    const donorAge= document.querySelector('#donorAge').value.trim();
-    const donorPhone= document.querySelector('#donorPhone').value.trim();
+    let donorName = document.querySelector('#donorName').value;
+    let donorHeight = document.querySelector('#donorHeight').value;
+    let donorWeight= document.querySelector('#donorWeight').value;
+    let donorGender = document.querySelector('#donorGender').value;
+    let donorType = document.querySelector('#donorType').value;
+    let donorAge= document.querySelector('#donorAge').value;
+    let donorPhone= document.querySelector('#donorPhone').value;
 
     if (donorName && donorHeight && donorWeight && donorGender && donorType && donorAge & donorPhone) {
       const response = await fetch('/api/donors', {
@@ -17,7 +17,7 @@ const donorFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
