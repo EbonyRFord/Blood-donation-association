@@ -1,25 +1,27 @@
 const donorFormHandler = async (event) => {
     event.preventDefault();
   
-    let donorName = document.querySelector('#donorName').value;
-    let donorHeight = document.querySelector('#donorHeight').value;
-    let donorWeight= document.querySelector('#donorWeight').value;
-    let donorGender = document.querySelector('#donorGender').value;
-    let donorType = document.querySelector('#donorType').value;
-    let donorAge= document.querySelector('#donorAge').value;
-    let donorPhone= document.querySelector('#donorPhone').value;
+    let name = document.querySelector('#donorName').value;
+    let height = document.querySelector('#donorHeight').value;
+    let weight= document.querySelector('#donorWeight').value;
+    let gender = document.querySelector('#donorGender').value;
+    let bloodtype = document.querySelector('#donorType').value;
+    let age= document.querySelector('#donorAge').value;
+    let phone= document.querySelector('#donorPhone').value;
 
-    if (donorName && donorHeight && donorWeight && donorGender && donorType && donorAge & donorPhone) {
+    if (name && height && weight && gender && bloodtype && age && phone) {
       const response = await fetch('/api/donors', {
         method: 'POST',
-        body: JSON.stringify({ donorName, donorHeight, donorWeight, donorGender, donorType, donorAge, donorPhone  }),
+        body: JSON.stringify({ name, height, weight, gender, bloodtype, age, phone  }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         document.location.replace('/profile');
+        
       } else {
         alert(response.statusText);
+        console.log(donorName)
       }
     }
   };
