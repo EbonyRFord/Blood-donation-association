@@ -2,14 +2,62 @@
 #logout {
   float: right;
   margin-right: 20px;
+  background: none;
+  border: none;
+  color: white;
 }
+
+.navbar {
+  background-color: red;
+   height: 80px;
+}
+
+
+.header{
+  text-align: center;
+  color: white;
+  
+}
+
+.profileBtn{
+  color: white;
+  margin-left: 20px;
+}
+
+.homeBtn{
+color: white;
+margin-left: 20px;
+}
+
+
+.homepage-image{
+  width: 120%;  
+height: 100%; 
+padding-bottom: 25px;
+}
+
+.donorListBtn{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.form-results{
+  padding-left: 35px;
+}
+
 .footer{
   text-align: center;
+  background-color: red;
+  color: white;
+  position:fixed;
+bottom:0;
+left:0;width:100%;
 }
     
 .login {
   float: right;
   padding-right: 50px;
+  color: white;
 }
     
 .pe-2 {

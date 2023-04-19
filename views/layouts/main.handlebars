@@ -11,15 +11,15 @@
 
 <body>
 
-<header class="display-flex justify-space-between align-center p-2"></header>
+<header>
 
   <nav class="navbar">
     {{!-- <img src="/images/logo-plus-sign.jpg" alt"logo"> --}}
-    <h1 class="footer"> Blood Donation Association</h1>
+    <h1 class="header"> Blood Donation Association</h1>
 
     <span>
-      <a href="/profile" class="pe-3">Profile</a>
-      <a href="/" class="pe-2">Home</a>
+      <a href="/profile" class="pe-3, profileBtn">Profile</a>
+      <a href="/" class="pe-2, homeBtn">Home</a>
       {{#if loggedIn}}
       <button id="logout" class="logout">Logout</button>
       {{else}}
@@ -28,7 +28,7 @@
     </span>
 
   </nav>
-
+</header>
 <main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
     {{{ body }}}
