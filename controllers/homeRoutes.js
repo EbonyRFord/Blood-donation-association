@@ -27,9 +27,9 @@ router.get('/scheduler', withAuth, async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
   
-  // res.render('profile', {loggedIn: req.session.loggedIn});
+
   try {
-    // Find the logged in user based on the session ID
+  
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Donor }],
@@ -46,7 +46,7 @@ router.get('/profile', withAuth, async (req, res) => {
     res.render('profile', {
       ...user,
       donor,
-      logged_in: true
+      loggedIn: true
     });
   } catch (err) {
     res.status(500).json(err);
