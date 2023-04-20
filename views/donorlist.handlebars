@@ -2,9 +2,14 @@
             <a href="/scheduler" class="btn btn-danger">Schedule Appointment Today!</a>
         </div>
 
+<div class="flex-row justify-center" style="margin-bottom: 10px;">
+      <a href="/scheduler" class="btn btn-danger">Schedule Appointment Today!</a>
+</div>
+
+
+<div class="flex-row justify-space-between">
 {{#each donors as |donor|}}
-<div class="flex-row justify-center">
-      
+
     <div class="card card-rounded col-md-5 text-center">
         
         <div class="card-header">
@@ -20,9 +25,11 @@
         <P>Donor Blood Type: {{donor.bloodtype}}</p>
         <P>Donor Phone Number: {{donor.phone}}</p>
         </div>
-    
+
     </div>
-</div>
+
 
 
 {{/each}}
+
+</div>

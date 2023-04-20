@@ -1,11 +1,11 @@
-<div class="row align-center mb-5">
+<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
 
     <h2 class="page-title">Input information to be added to a donor list or <a href="/scheduler"
         class="btn btn-danger">Schedule Appointment Today!</a>
     </h2>
     <div class="row">
 
-    <form class="form-profile donor-form">
+    <form class="form-profile donor-form mr-5">
 
       <div class="form-group">
         <label for="donor-name">Name:</label>
@@ -86,48 +86,36 @@
       </div>
 
     </form>
+<div class="card card-rounded col-md-5 text-center ml-5 donorProfileCard">
+    <div class="">
+     <div class="card-header">
 
-    <div class="form-results">
-      <div class="p-4 mt-4">
-        <h3>Name: </h3>
-        <h3>
-        
-         {{donor.[0].[name]}}
-        
-          </h3>
-      </div>
-      
-      <div class="p-4 mt-4">
-        <h3>Height: </h3>
-        <h3></h3>
-      </div>
+        <h3>Donor Name: {{donor.name}}</h3>
 
-      <div class="p-4 mt-4">
-        <h3>Weight: </h3>
-        <h3></h3>
-      </div>
+        </div>
 
-      <div class="p-4 mt-4">
-        <h3>Gender: </h3>
-        <h3></h3>
-      </div>
+        <div class="card-body"> 
 
-      <div class="p-4 mt-4">
-        <h3>Blood Type: </h3>
-        <h3></h3>
-      </div>
+          <div>
+        <p><strong>Height: </strong>{{donor.height}} in.</p>
+        </div>
 
-      <div class="p-4 mt-4">
-        <h3>Age: </h3>
-        <h3></h3>
-      </div>
+        <div>
+        <p><strong>Weight: </strong>{{donor.weight}} lbs.</p>
+        </div>
 
-      <div class="p-4 mt-4">
-        <h3>Phone Number: </h3>
-        <h3></h3>
-      </div>
+        <div>
+        <p><strong>Gender: </strong>{{donor.gender}} </p>
+        </div>
 
+        <div>
+        <p><strong>Blood Type: </strong>{{donor.bloodtype}} </p>
+        </div>
+
+        <div>
+        <p><strong>Phone Number: </strong>{{donor.phone}} </p>
+        </div>
     </div>
 </div>
-</div>
+</div> 
 <script src="./js/donorlistform.js"></script>
