@@ -6,7 +6,8 @@
         "gender": "Male",
         "bloodtype": "A+",
         "age": 20,
-        "phone": 8285551212
+        "phone": 8285551212,
+        "user_id": 1
     },
     {
         "name": "Sallie",
@@ -15,6 +16,7 @@
         "gender": "Female",
         "bloodtype": "A+",
         "age": 20,
-        "phone": 8285551111
+        "phone": 8285551111,
+        "user_id": 2
     }
 ]
