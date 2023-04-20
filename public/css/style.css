@@ -76,3 +76,76 @@ left:0;width:100%;
 .pe-3{
   margin-left: 20px;
 }
+
+@media screen and (max-width: 450px ) {
+.header{
+  text-align: center;
+  color: white;
+  
+}
+
+.navbar {
+  background-color: red;
+   height: 130px;
+}
+
+.homepage-image{
+  width: 99%;  
+height: 100%; 
+padding-bottom: 25px;
+}
+
+.homepageText{
+  font-size: 60px;
+  text-align: center;
+}
+
+.homepageTextColumn{
+align-items: center;
+margin-left: 70px;
+}
+
+.donorCard{
+  margin-right: 25px;
+}
+
+.donorProfileCard{
+  margin-right: 25px;
+}
+}
+
+
+
+@media screen and (max-width: 821px) and (min-width: 451px){
+
+  .navbar {
+    background-color: red;
+     height: 100px;
+     width: 105%;
+  }
+
+  .header{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    
+  }
+  .homepageText{
+    font-size: 40px;
+  text-align: start;
+  }
+  
+  .homepageTextColumn{
+    margin-left: 300px;
+    }
+
+    .homepage-image{
+      width: 99%;  
+    height: 100%; 
+    padding-bottom: 25px;
+    margin-left: 55px;
+    }
+    
+
+
+}
