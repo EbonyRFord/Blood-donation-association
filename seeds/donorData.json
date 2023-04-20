@@ -1,6 +1,7 @@
 [
     {
-        "name": "Chris",
+        "id": 1,
+        "name": "Bob",
         "height": 72,
         "weight": 200,
         "gender": "Male",
@@ -10,6 +11,18 @@
         "user_id": 1
     },
     {
+        "id": 2,
+        "name": "Harold",
+        "height": 64,
+        "weight": 130,
+        "gender": "Male",
+        "bloodtype": "A+",
+        "age": 20,
+        "phone": 8285551111,
+        "user_id": 2
+    },
+    {
+        "id": 3,
         "name": "Sallie",
         "height": 64,
         "weight": 130,
@@ -17,6 +30,6 @@
         "bloodtype": "A+",
         "age": 20,
         "phone": 8285551111,
-        "user_id": 2
+        "user_id": 3
     }
 ]

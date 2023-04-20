@@ -1,9 +1,9 @@
 <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
 
-    <h2 class="page-title">Input information to be added to a donor list or <a href="/scheduler"
-        class="btn btn-danger">Schedule Appointment Today!</a>
-    </h2>
-    <div class="row">
+  <h2 class="page-title">Input information to be added to a donor list or <a href="/scheduler"
+      class="btn btn-danger">Schedule Appointment Today!</a>
+  </h2>
+  <div class="row">
 
     <form class="form-profile donor-form mr-5">
 
@@ -51,8 +51,8 @@
         <label for="donor-gender">Gender:</label>
         <select class="form-input" id="donorGender">
           <option value="">Select Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
         </select>
       </div>
 
@@ -85,37 +85,51 @@
         <button class="btn btn-primary" type="submit">Submit</button>
       </div>
 
-    </form>
-<div class="card card-rounded col-md-5 text-center ml-5 donorProfileCard">
-    <div class="">
-     <div class="card-header">
+      <div class="form-group" style="display:none;">
+        <p id="donor_userId">{{donor.user_id}}</p>
+      </div>
 
-        <h3>Donor Name: {{donor.name}}</h3>
+      <div class="form-group" style="display:none;">
+        <p id="userId">{{user.id}}</p>
+      </div>
+
+    </form>
+    <div class="card card-rounded col-md-5 text-center ml-5 donorProfileCard">
+      <div class="">
+        <div class="card-header">
+
+          <h3>Donor Name: {{donor.name}}</h3>
 
         </div>
 
-        <div class="card-body"> 
+        <div class="card-body">
 
           <div>
-        <p><strong>Height: </strong>{{donor.height}} in.</p>
+            <p><strong>Height: </strong>{{donor.height}} in.</p>
+          </div>
+
+          <div>
+            <p><strong>Weight: </strong>{{donor.weight}} lbs.</p>
+          </div>
+
+          <div>
+            <p><strong>Gender: </strong>{{donor.gender}} </p>
+          </div>
+
+          <div>
+            <p><strong>Blood Type: </strong>{{donor.bloodtype}} </p>
+          </div>
+
+          <div>
+            <p><strong>Age: </strong>{{donor.age }} </p>
+          </div>
+
+          <div>
+            <p><strong>Phone Number: </strong>{{donor.phone}} </p>
+          </div>
+
         </div>
 
-        <div>
-        <p><strong>Weight: </strong>{{donor.weight}} lbs.</p>
-        </div>
-
-        <div>
-        <p><strong>Gender: </strong>{{donor.gender}} </p>
-        </div>
-
-        <div>
-        <p><strong>Blood Type: </strong>{{donor.bloodtype}} </p>
-        </div>
-
-        <div>
-        <p><strong>Phone Number: </strong>{{donor.phone}} </p>
-        </div>
+      </div>
     </div>
-</div>
-</div> 
-<script src="./js/donorlistform.js"></script>
+    <script src="./js/donorlistform.js"></script>

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Donor, User} = require('../models');
+const { Donor, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
   res.render('homepage', {
     loggedIn: req.session.loggedIn
-   });
+  });
 });
 
 router.get('/login', (req, res) => {
@@ -21,30 +21,33 @@ router.get('/login', (req, res) => {
 
 
 router.get('/scheduler', withAuth, async (req, res) => {
-  
-  res.render('scheduler', {loggedIn: req.session.loggedIn});
+
+  res.render('scheduler', { loggedIn: req.session.loggedIn });
 });
 
 router.get('/profile', withAuth, async (req, res) => {
-  
 
   try {
-  
+
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Donor }],
     });
 
-    const donorData = await Donor.findOne({user_id: req.session.user_id})
-
-    console.log(donorData)
+    const donorData = await Donor.findAll();
 
     const user = userData.get({ plain: true });
 
-    const donor = donorData.get({ plain: true });
+    const donors = donorData.map((donor) => donor.get({ plain: true }));
+
+    const foundDonor = donors.filter(donor => {
+      return donor.user_id === req.session.user_id
+    });
+
+    const donor = foundDonor[0];
 
     res.render('profile', {
-      ...user,
+      user,
       donor,
       loggedIn: true
     });
@@ -52,13 +55,11 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 
-  
 });
 
 
-
 router.get('/donorlist', withAuth, async (req, res) => {
-  
+
   try {
     // Get all projects and JOIN with user data
     const donorData = await Donor.findAll();
@@ -67,18 +68,14 @@ router.get('/donorlist', withAuth, async (req, res) => {
     const donors = donorData.map((donor) => donor.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('donorlist', { 
-      donors, 
-      loggedIn: req.session.loggedIn 
+    res.render('donorlist', {
+      donors,
+      loggedIn: req.session.loggedIn
     });
   } catch (err) {
     res.status(500).json(err);
   }
 
-
-
-
 });
-
 
 module.exports = router;

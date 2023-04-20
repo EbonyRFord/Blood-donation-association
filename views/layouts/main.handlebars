@@ -11,36 +11,36 @@
 
 <body>
 
-<header>
+  <header>
 
-  <nav class="navbar">
-    <h1 class="header"> Blood Donation Association</h1>
+    <nav class="navbar">
+      <h1 class="header"> Blood Donation Association</h1>
 
-    <span>
-      <a href="/" class="pe-2, homeBtn">Home</a>
-      <a href="/profile" class="pe-3, profileBtn">Profile</a>
-      <a href="/donorlist" class="pe-3, profileBtn">Donor List</a>
-      {{#if loggedIn}}
-      <button id="logout" class="logout">Logout</button>
-      {{else}}
-      <a href="/login" class="login">Login</a>
-      {{/if}}
-    </span>
+      <span>
+        <a href="/" class="pe-2, homeBtn">Home</a>
+        <a href="/profile" class="pe-3, profileBtn">Profile</a>
+        <a href="/donorlist" class="pe-3, profileBtn">Donor List</a>
+        {{#if loggedIn}}
+        <button id="logout" class="logout">Logout</button>
+        {{else}}
+        <a href="/login" class="login">Login</a>
+        {{/if}}
+      </span>
 
-  </nav>
-</header>
-<main class="container container-fluid mt-5">
+    </nav>
+  </header>
+  <main class="container container-fluid mt-5">
     <!-- Render the contents of the sub layout here -->
     {{{ body }}}
 
-</main>
+  </main>
 
-<footer class="footer">
-Made by: Aiden Miller, Ebony Ford, and Christopher Snyder
-</footer>
+  <footer class="footer">
+    Made by: Aiden Miller, Ebony Ford, and Christopher Snyder
+  </footer>
 
-{{#if loggedIn}}
- <script src="/js/logout.js"></script>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
   {{/if}}
 
 </body>
