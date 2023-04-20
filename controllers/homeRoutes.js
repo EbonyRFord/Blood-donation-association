@@ -27,9 +27,35 @@ router.get('/scheduler', withAuth, async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
   
-  res.render('profile', {loggedIn: req.session.loggedIn});
+  // res.render('profile', {loggedIn: req.session.loggedIn});
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Donor }],
+    });
+
+    const donorData = await Donor.findOne({user_id: req.session.user_id})
+
+    console.log(donorData)
+
+    const user = userData.get({ plain: true });
+
+    const donor = donorData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      donor,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+
   
 });
+
+
 
 router.get('/donorlist', withAuth, async (req, res) => {
   

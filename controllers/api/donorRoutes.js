@@ -4,7 +4,7 @@ const { Donor } = require('../../models');
 router.post('/', async (req, res) => {
 
   try {
-    const donorData = await Donor.create(req.body);
+    const donorData = await Donor.create({...req.body, user_id: req.session.user_id});
 
     req.session.save(() => {
       res.status(200).json(donorData);
