@@ -1,7 +1,12 @@
+  <div class="flex-row justify-center" style="margin-bottom: 10px;">
+            <a href="/scheduler" class="btn btn-danger">Schedule Appointment Today!</a>
+        </div>
 
 {{#each donors as |donor|}}
 <div class="flex-row justify-center">
+      
     <div class="card card-rounded col-md-5 text-center">
+        
         <div class="card-header">
 
         <h3>Donor Name: {{donor.name}}</h3>
@@ -15,11 +20,7 @@
         <P>Donor Blood Type: {{donor.bloodtype}}</p>
         <P>Donor Phone Number: {{donor.phone}}</p>
         </div>
-        <div class="card-footer">
-            <a href="/scheduler" class="btn btn-danger">Schedule Appointment Today!</a>
-            {{!-- <a href="/profile" class="btn btn-danger">Profile Page!</a> --}}
-        </div>
-
+    
     </div>
 </div>
 
