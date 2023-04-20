@@ -1,5 +1,27 @@
+
 {{#each donors as |donor|}}
-<h2>Donor: {{donor.name}}</h2>
-<h2>Height: {{donor.height}}</h2>
+<div class="flex-row justify-center">
+    <div class="card card-rounded col-md-5 text-center">
+        <div class="card-header">
+
+        <h3>Donor Name: {{donor.name}}</h3>
+
+        </div>
+
+        <div class="card-body"> 
+        <P>Donor Height: {{donor.height}} in.</p>
+        <P>Donor Weight: {{donor.weight}} lbs.</p>
+        <P>Donor Gender: {{donor.gender}}</p>
+        <P>Donor Blood Type: {{donor.bloodtype}}</p>
+        <P>Donor Phone Number: {{donor.phone}}</p>
+        </div>
+        <div class="card-footer">
+            <a href="/scheduler" class="btn btn-danger">Schedule Appointment Today!</a>
+            {{!-- <a href="/profile" class="btn btn-danger">Profile Page!</a> --}}
+        </div>
+
+    </div>
+</div>
+
 
 {{/each}}
