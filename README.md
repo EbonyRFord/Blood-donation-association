@@ -15,9 +15,6 @@ Our website allows a user to make an account and login.  As a donor, you can set
 * [Support](#support)
 * [Credits](#credits)
 
-## Expected Webview
-
-Insert Picture Here
 
 ## Installation
 
@@ -41,3 +38,11 @@ If you have any issues, feel free to email one of the group members.  Our email 
 ## Credits
 
 This project was a collaboration between fellow classmates: Aiden Miller, Ebony Ford, and Christopher Snyder.  
+
+## Expected Webviews
+Homepage:
+![Homepage](https://user-images.githubusercontent.com/124528804/233446368-9227fb71-c7e6-4c4f-9bb7-94ef5d229d82.png)
+Donor List:
+![donor-table](https://user-images.githubusercontent.com/124528804/233446661-2f4147d1-e39f-4a8a-ac52-4fa0ffc64084.png)
+Scheduler:
+![schedule](https://user-images.githubusercontent.com/124528804/233446710-b0ec98eb-581f-4f3d-9134-e89427e430d8.png)
